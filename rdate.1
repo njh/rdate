@@ -1,0 +1,38 @@
+.TH "RDATE" "1" "May 2001"
+.SH "NAME"
+rdate \- get the time via the network
+.SH "SYNOPSIS"
+.B rdate
+[\-p] [\-s] [\-u] [\-l] [\-t sec] [\-a] [host...]
+.SH "DESCRIPTION"
+.B rdate
+connects to an RFC 868 time server over a TCP/IP network, printing the returned time and/or setting the system clock.
+.fi 
+.SS OPTIONS
+.TP 
+.I \-p
+Print the time returned by the remote machine.
+.TP 
+.I \-s
+Set the system time to the first returned time.
+.TP 
+.I \-u
+Use UDP instead of TCP as the transport.
+.TP
+.I \-l
+Use syslog to output errors (cron.warning) and output (cron.info).
+.TP
+.I \-t
+Set timeout in seconds for every attempt to retreive date.
+.TP
+.I \-a
+Adjust time gradually, rather than in a big jump.
+.SH "SEE ALSO"
+.NA
+.NF
+adjtime(2), inetd(8), gettimeofday(2), wtmp(5)
+.SH "COPYRIGHT"
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version. See COPYING for details.

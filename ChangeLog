@@ -1,0 +1,28 @@
+2004-11-27 Nicholas Humfrey <njh@ecs.soton.ac.uk>
+
+	* Changed build system to automake
+	* Should now compile on most modern UNIX platforms
+	* Changed to pure protocol independent socket code
+	* Added -a option to change time using adjtime
+	* Changes to system clock are logged to wtmp
+	* Improved timeout for UDP sections of code	
+
+2004-03-16 Johan Nilsson <joh-nils@dsv.su.se>
+
+	* Timeout support added.
+
+2002-11-06 Elliot Lee <sopwith@redhat.com>
+
+	* Patch from Tomek Orzechowski <orzech@pld.org.pl> - alarm(10) to not wait forever for connections.
+
+2001-05-23 Phil Knirsch <pknirsch@redhat.com>
+
+	* Added UDP protocol support.  Close the connection after message handling in conformance to RFC 868.
+
+2002-03-07 Elliot Lee <sopwith@redhat.com>
+
+	* Add syslog functionality.
+
+2000-02-04 Elliot Lee <sopwith@redhat.com>
+
+	* Wrote it (previous incarnation had license problems, all 200 lines of it).
