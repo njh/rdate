@@ -1,3 +1,9 @@
+2007-11-06 Nicholas Humfrey <njh@ecs.soton.ac.uk>
+
+	* Applied patch from 'ezzetabi' which provies a quick fix
+	  for time differences between the server and the client 
+	  when setting the clock.
+
 2004-11-27 Nicholas Humfrey <njh@ecs.soton.ac.uk>
 
 	* Changed build system to automake
