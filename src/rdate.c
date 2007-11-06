@@ -298,7 +298,8 @@ rdate(const char *hostname, time_t *retval)
 static void
 usage(int iserr)
 {
-	fprintf(stderr, "Usage: %s [-s] [-p] [-u] [-l] [-t sec] [-a] <host> ...\n", argv0);
+	fprintf(stderr, "Usage: %s [-s] [-p] [-u] [-l] [-d sec] [-t sec] [-a]"
+        "<host> ...\n", argv0);
 	exit(iserr?1:0);
 }
 
@@ -306,6 +307,7 @@ int main(int argc, char *argv[])
 {
 	int set_mode = 0;
 	int adjust_time = 0;
+	int time_difference = 0;
 	int retval = 0;
 	int success = 0;
 	int c;
@@ -318,7 +320,7 @@ int main(int argc, char *argv[])
 
 
 	// Parse parameters 
-	while ((c = getopt(argc, argv, "aspuln:t:h?")) != -1) {
+	while ((c = getopt(argc, argv, "aspuln:t:d:h?")) != -1) {
 	
 		switch(c) {
 			case 'a': adjust_time = 1; break;
@@ -327,6 +329,7 @@ int main(int argc, char *argv[])
 			case 'u': use_tcp = 0; break;
 			case 'l': log_mode = 1; break;
 			case 't': timeout = atoi(optarg); break;
+			case 'd': time_difference = atoi(optarg); break;
 			case 'n': service = optarg; break;
 			case 'h':
 			case '?':
@@ -362,6 +365,9 @@ int main(int argc, char *argv[])
 		if(!rdate(*argv, &timeval)) {
 			// keep track of the succesful request
 			success = 1;
+
+            // apply the requested difference
+            timeval += time_difference;
 
 			// Convert the time to a string
 			ctime_r( &timeval, timestr );
