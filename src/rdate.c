@@ -20,7 +20,7 @@
 /* By Elliot Lee <sopwith@redhat.com>, because some guy didn't bother
    to put a copyright/license on the previous rdate. See bugzilla.redhat.com, bug #8619.
    
-   2004-11-27 - Improvements by Nicholas Humfrey <njh@ecs.soton.ac.uk>
+   2004-11-27 - Improvements by Nicholas J Humfrey <njh@aelius.com>
    See ChangeLog for details.
 */
 

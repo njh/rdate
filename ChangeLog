@@ -1,10 +1,10 @@
-2007-11-06 Nicholas Humfrey <njh@ecs.soton.ac.uk>
+2007-11-06 Nicholas J Humfrey <njh@aelius.com>
 
 	* Applied patch from 'ezzetabi' which provies a quick fix
 	  for time differences between the server and the client 
 	  when setting the clock.
 
-2004-11-27 Nicholas Humfrey <njh@ecs.soton.ac.uk>
+2004-11-27 Nicholas J Humfrey <njh@aelius.com>
 
 	* Changed build system to automake
 	* Should now compile on most modern UNIX platforms
