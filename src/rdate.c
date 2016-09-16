@@ -138,7 +138,7 @@ void set_timeout( int timeout )
 
 
 static int
-rdate_tcp( int fd, struct addrinfo* ainfo, char* buf, int buf_size )
+rdate_tcp( int fd, struct addrinfo* ainfo, unsigned char* buf, int buf_size )
 {
 	int nr, n_toread;
 
@@ -178,7 +178,7 @@ rdate_tcp( int fd, struct addrinfo* ainfo, char* buf, int buf_size )
 
 
 static int
-rdate_udp( int fd, struct addrinfo* ainfo, char* buf, int buf_size )
+rdate_udp( int fd, struct addrinfo* ainfo, unsigned char* buf, int buf_size )
 {
 	fd_set readfds;
 	struct timeval tv, *tv_ptr = NULL;
