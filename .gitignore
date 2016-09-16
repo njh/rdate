@@ -20,6 +20,8 @@ Makefile
 Makefile.in
 stamp-h1
 
+README
+
 src/rdate
 src/config.h
 src/config.h.in
