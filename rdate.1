@@ -3,7 +3,7 @@
 rdate \- get the time via the network
 .SH "SYNOPSIS"
 .B rdate
-[\-p] [\-s] [\-u] [\-l] [\-t sec] [\-a] [host...]
+[\-p] [\-s] [\-u] [\-l] [\-t sec] [\-a] [\-n port] [host...]
 .SH "DESCRIPTION"
 .B rdate
 connects to an RFC 868 time server over a TCP/IP network, printing the returned time and/or setting the system clock.
@@ -30,6 +30,9 @@ Set timeout in seconds for every attempt to retreive date.
 .TP
 .I \-a
 Adjust time gradually, rather than in a big jump.
+.TP
+.I \-n
+Use custom port instead of port 37.
 .SH "SEE ALSO"
 .NA
 .NF
