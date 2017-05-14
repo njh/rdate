@@ -298,7 +298,7 @@ rdate(const char *hostname, time_t *retval)
 static void
 usage(int iserr)
 {
-	fprintf(stderr, "Usage: %s [-s] [-p] [-u] [-l] [-d sec] [-t sec] [-a]"
+	fprintf(stderr, "Usage: %s [-s] [-p] [-u] [-l] [-d sec] [-t sec] [-a] [-n port] "
         "<host> ...\n", argv0);
 	exit(iserr?1:0);
 }
