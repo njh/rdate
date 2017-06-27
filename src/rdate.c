@@ -82,7 +82,7 @@ write_log(int is_error, char *format, ...)
 		return; /* Error, which we can't report because this _is_ the error
 				reporting mechanism */
 	if(log_mode)
-		syslog(is_error?LOG_WARNING:LOG_INFO, buf);
+		syslog(is_error?LOG_WARNING:LOG_INFO, "%s", buf);
 	if(is_error || print_mode)
 		fprintf(is_error?stderr:stdout, "%s: %s\n", argv0, buf);
 }
